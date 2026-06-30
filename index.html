@@ -97,9 +97,21 @@
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20%, 60% { transform: translateX(-5px); }
-            40%, 80% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20%,
+            60% {
+                transform: translateX(-5px);
+            }
+
+            40%,
+            80% {
+                transform: translateX(5px);
+            }
         }
 
         button {
@@ -303,11 +315,15 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes counter-spin {
-            to { transform: rotate(-360deg); }
+            to {
+                transform: rotate(-360deg);
+            }
         }
 
         #arrange-backdrop {
@@ -443,7 +459,7 @@
 
     <div id="control-panel">
         <div class="control-group">
-            <label>Upload File</label>
+            <label>Upload</label>
             <button id="btn-upload-pdf" class="icon-button" type="button" title="Upload PDF" aria-label="Upload PDF">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -455,30 +471,32 @@
         </div>
 
         <div class="control-group">
-            <label>Nama File</label>
+            <label>Nama</label>
             <input type="text" id="file-name" value="" placeholder="">
         </div>
 
         <div class="control-group">
-            <label>Vertical Shift</label>
+            <label>VS</label>
             <input type="number" id="vertical-shift" value="0" step="0.5">
             <span>mm</span>
         </div>
 
         <div class="control-group">
-            <label>Horizontal Shift</label>
+            <label>HS</label>
             <input type="number" id="horizontal-shift" value="0" step="0.5">
             <span>mm</span>
         </div>
 
         <div class="control-group">
-            <label>Sisi Booklet</label>
+            <label>Hal</label>
             <button id="btn-prev-page" class="icon-button" type="button" title="Sebelumnya" disabled>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
             </button>
-            <span id="page-nav-display" style="font-size: 13px; font-weight: bold; min-width: 50px; text-align: center; color: #fff;">0 / 0</span>
+            <span id="page-nav-display"
+                style="font-size: 13px; font-weight: bold; min-width: 50px; text-align: center; color: #fff;">0 /
+                0</span>
             <button id="btn-next-page" class="icon-button" type="button" title="Berikutnya" disabled>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <polyline points="9 18 15 12 9 6"></polyline>
@@ -487,7 +505,8 @@
         </div>
 
         <button id="btn-arrange" type="button" disabled>Arrange Page</button>
-        <button id="btn-export" class="secondary icon-button" type="button" title="Download Booklet PDF" aria-label="Download Booklet PDF" disabled>
+        <button id="btn-export" class="secondary icon-button" type="button" title="Download Booklet PDF"
+            aria-label="Download Booklet PDF" disabled>
             <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <path d="M7 10l5 5 5-5"></path>
